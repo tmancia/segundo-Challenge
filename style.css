@@ -1,0 +1,90 @@
+
+.titulo {
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+
+}
+
+.btn {
+  border: 0;
+  color: white;
+  font-weight: bold;
+  background-color: blue;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 30%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text {
+
+  margin-left: 50PX;
+}
+
+.indicacion {
+  
+  font-weight: bold;
+  margin-left: 50PX;
+  }
+
+  .mostrar{
+  font-weight: bold;
+  font-size: 40px;
+  color: blue;
+  margin-left: 50PX;
+  }
+
+  .mostrar1{
+  font-weight: bold;
+  font-size: 40px;
+  color: red;
+  margin-left: 50PX;
+  }
+
+  .ganador{
+    display: none;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-size: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .perdedor{
+   display: none;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-size: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      color: lightgray;
+    }
+
+ 

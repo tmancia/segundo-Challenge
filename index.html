@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div style="text-align:center; margin: 50px 0px;">
+      <h1 class="titulo">Ahorcado</h1>
+      <button class="btn" id="iniciar-juego" onclick="iniciarJuego()">INICIAR JUEGO</button>
+    </div>
+    <div style="text-align:center">
+      <p>Ingrese una palabra en letras Mayuculas</p>
+      <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra" onkeypress="return sololetras(event)" onpaste="return false">
+      <button class="btn" id="nueva-palabra" onclick="agregar()">AGREGAR PALABRA</button> 
+      <button class="btn" id="mostrar" onclick="mostrar()">Mostrar</button>
+      <p id="demo"></p>
+    </div>
+    <div>
+      <p class="indicacion">Ingrese una letra en mayuscula</p>
+      <input class="text" type="text" id="letra" maxlength="1" onkeypress="return sololetras(event)" onpaste="return false">
+      <p id="output" class="mostrar"></p>
+     <P id="noUsadas" class="mostrar1"></P>
+    </div>
+    <div style="text-align:center;">
+      <canvas id="ahorcado" height="800px" width="1200px"></canvas>
+    </div>
+    <div class="ganador" id="ganador">
+      <img src="img/gan.jpg" width="300" height="500">
+      <p>Felicidades has ganado!!!!</p>
+      
+    </div>
+    <div class="perdedor" id="perdedor">
+    <img src="img/per.jpg" width="300" height="500">
+      <p>Lamentablente perdiste!!!!</p>
+      
+      
+    </div>
+    <div class="footer">
+    <footer>
+        <p>Desarrollado por .::.Tulio Mancia.::.</p>
+        <p>Bajo tutorias de Alura Latam</p>
+    </footer>
+  
+    <script type="text/javascript" src="canvas.js"></script>
+    <script type="text/javascript" src="ahorcado.js"></script>
+  </body>
+</html>
