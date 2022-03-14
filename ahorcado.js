@@ -57,15 +57,19 @@ String.prototype.replaceAt=function(index, character) { return this.substr(0, in
 
 const palabra = palabras[Math.floor(Math.random()*palabras.length)];
 var palabraConGuiones = palabra.replace(/./g, "? ");
+var palabraUsadas = [];
+
+
 
 var contadorFallos = 0;
+var contadorFallo = contadorFallos;
 
 
 document.querySelector('#letra').addEventListener('keyup',()=>{
 	const letra = document.querySelector('#letra').value;
+	
 	var haFallado = true;
-
-
+	
 	
 	for(const i in palabra){
 		if(letra == palabra[i]){
@@ -74,36 +78,40 @@ document.querySelector('#letra').addEventListener('keyup',()=>{
 
 			haFallado = false;
 		} 
-}
-
+ }
+	
+ 	if (haFallado==true) {
+		palabraUsadas = palabraUsadas.concat(letra);
+		document.getElementById("noU").innerHTML = "Letras Usadas";
+		document.getElementById("noUsada").innerHTML = palabraUsadas.join(" ");
+		
+	 }
+	
 
 	if(haFallado){
 		 
-		document.querySelector('#noUsadas').innerHTML = letra;	
+		
 		contadorFallos++;
 
 		if (contadorFallos==1) {
-			figura1();		
-			
-
+			figura1();	
 		}
 		if (contadorFallos==2) {
-			figura2();		
-				
+			
+			figura2();	
 		}
 		if (contadorFallos==3) {
-			figura3();			
+			figura3();	
 		}
 		if (contadorFallos==4) {
-			figura4();			
+			figura4();	
 		}
 		if (contadorFallos==5) {
-			figura5();			
+			figura5();	
 		}
 		if (contadorFallos==6) {
 			figura6();
 		}
-
 
 		if(contadorFallos == 6){
 
@@ -112,12 +120,12 @@ document.querySelector('#letra').addEventListener('keyup',()=>{
 		}
 		}else{
 			if (palabraConGuiones.indexOf('?')<0) {
-				//document.write("Felicidades has ganado, la palabra secreta era: "+ palabra);
 				document.querySelector('#ganador').style.display = 'flex';
 			}
 		}	     	
 	
 	document.querySelector('#output').innerHTML = palabraConGuiones;
+	
 	
 	document.querySelector('#letra').value = '';
 	document.querySelector('#letra').focus();

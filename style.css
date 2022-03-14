@@ -41,14 +41,21 @@
 
   .mostrar{
   font-weight: bold;
-  font-size: 40px;
+  font-size: 25px;
   color: blue;
   margin-left: 50PX;
   }
 
+  #noU{
+      font-weight: bold;
+      font-size:20px;
+      color: rgb(6, 6, 7);
+      margin-left: 50PX;
+  }
+
   .mostrar1{
   font-weight: bold;
-  font-size: 40px;
+  font-size: 25px;
   color: red;
   margin-left: 50PX;
   }
